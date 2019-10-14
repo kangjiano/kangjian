@@ -30,9 +30,9 @@
         <div class="register_form_wrap">
             <div class="register_nav">
                 <ul>
-                    <li class="register_step"><span class="register_step-01">1</span>设置用户信息</li>
-                    <li><span>2</span>验证手机</li>
-                    <li><span>3</span>注册成功</li>
+                    <li class="register_step ulli"><span class="register_step-01">1</span>设置用户信息</li>
+                    <li class="ulli1"><span class="register_step-01">2</span>验证手机</li>
+                    <li class="ulli2"><span class="register_step-01">3</span>注册成功</li>
                 </ul>
             </div>
             <!-- 第一步 -->
@@ -44,8 +44,9 @@
 
                         <input type="text" id="username" name="user_name" class="register_text" title="用户名不能用非法字符"
                             value="" style="color: rgb(128, 128, 128);">
-                        <div class="red" id="red">用户名已存在</div>
+                        <div class="red" id="red"></div>
                         <div class="green" id="green"></div>
+                        <div class="clear"></div>
                     </div>
 
                     <div class="register_container-name">
@@ -54,23 +55,26 @@
                         <div class="register_yz">
                             <input type="password" placeholder="请设置6-20位密码，可由英文、数字及标点符号组成" style="color:#808080;"
                                 class="register_text register_password" id="userpassword">
-                            <div class="red" id="red" style="display:none"></div>
-                            <div class="green" id="green" style="display:none">&nbsp;</div>
-                            <div class="register_yz-b" id="register_yz-c1"></div>
-                            <div class="register_yz-b" id="register_yz-c2"></div>
-                            <div class="register_yz-b" id="register_yz-c3"></div>
+                            <div class="red1" id="red1" style="display:none"></div>
+                            <div class="green1" id="green1" style="display:none">&nbsp;</div>
+                            <div class="register_yz-br" id="register_yz-c1"></div>
+                            <div class="register_yz-by" id="register_yz-c2"></div>
+                            <div class="register_yz-bg" id="register_yz-c3"></div>
                             <div class="register_yz-text"> 弱</div>
                             <div class="register_yz-text"> 中</div>
                             <div class="register_yz-text"> 强</div>
                         </div>
+                        <div class="clear"></div>
+
                     </div>
                     <div class="register_container-name">
                         <span></span>
                         <div class="register_name">请确认密码：</div>
                         <input type="password" placeholder="请再次输入密码" class="register_text register_password"
                             style="color:#808080;" id="texts">
-                        <div class="red" id="red" style="display:none"></div>
-                        <div class="green" id="green" style="display:none">&nbsp;</div>
+                        <div class="red2" id="red2" style="display:none"></div>
+                        <div class="green2" id="green2" style="display:none">&nbsp;</div>
+                        <div class="clear"></div>
 
                     </div>
                     <input name="nchash" type="hidden" id="nchash" value="">
@@ -80,59 +84,60 @@
                         <div class="register_name">图文验证码：</div>
                         <input type="text" id="yzm" name="captcha" class="register_picture-text" title="请输入右侧图片上的验证码"
                             style="color: rgb(128, 128, 128);">
-                        <div class="register_picture"><img src=""
-                                title="" width="132" name="codeimage" border="0" id="codeimage">
+                        <div class="register_picture">
                         </div>
                         <b>看不清 <a href="javascript:void(0)"
                                 onclick="javascript:document.getElementById('codeimage').src = 'index.php?act=seccode&amp;op=makecode&amp;nchash=&amp;t=' + Math.random();">换一张</a></b>
 
-                        <div class="red" id="red" style="display:none"></div>
-                        <div class="green" id="green" style="display:none"></div>
+                        <div class="red3" id="red3" style="display:none"></div>
+                        <div class="green3" id="green3" style="display:none"></div>
                     </div>
+                    <div class="clear"></div>
+
                 </form>
-           
+
                 <div class="register_next"><a href="#" id="regist">下一步</a></div>
             </div>
             <!-- 第二步 -->
-            <div class="register_container-box">
-                    <form id="register_form" method="post"action="">
-                        <div class="register_container-name">
-                            <span></span>
-                            <div class="register_name">手&nbsp;机&nbsp;号&nbsp;码：</div>
-                            <input type="text" name="mobile" class="register_text" id="mobile" maxlength="11"
-                                placeholder="请输入真实的手机号码，确保验证码发送成功" style="color: rgb(128, 128, 128);">
-                            <div class="red" id="red" style="display:none"></div>
-                            
-                            <div class="green" id="green" style="display:none"></div>
-    
-                        </div>
-                        <input name="user_name" type="hidden" id="user_name" value="kangjian">
-                        <input name="password" type="hidden" id="password" value="kangjian">
-                        <input name="captcha" type="hidden" id="captcha" value="cp6b">
-                        <input name="password_confirm" type="hidden" id="password_confirm" value="kangjian">
-                        <div class="register_container-name">
-                            <span></span>
-                            <div class="register_name">手机验证码：</div>
-                            <input type="text" name="vcode" id="vcode" class="register_vcode-text" maxlength="4"
-                                title="请输入您手机上的验证码">
-                            <input class="register_vcode" type="button" id="send_auth_code" value="免费获取验证码">
-                            <div width="150px;" id="red1" style="color:red;"></div>
-                            <div class="clear"></div>
-                        </div>
-                    </form>
-                    <div class="bo-si1">
-                        <form>
-                            <input type="checkbox" checked="checked" class="register_checked">
-                            <b>我已阅读并同意<a href="http://www.mayzone360.com/shop/document-agreement.html">《美逊商城会员注册协议》</a></b>
-                        </form>
+            <div class="register_container-box1">
+                <form id="register_form" method="post" action="">
+                    <div class="register_container-name">
+                        <span></span>
+                        <div class="register_name">手&nbsp;机&nbsp;号&nbsp;码：</div>
+                        <input type="text" name="mobile" class="register_text" id="mobile" maxlength="11"
+                            placeholder="请输入真实的手机号码，确保验证码发送成功" style="color: rgb(128, 128, 128);">
+                        <div class="red4" id="red4" style="display:none"></div>
+
+                        <div class="green4" id="green4" style="display:none"></div>
                         <div class="clear"></div>
                     </div>
-                    <div class="register_next"><a href="#" id="regist">注册</a></div>
+                    <input name="user_name" type="hidden" id="user_name" value="kangjian">
+                    <input name="password" type="hidden" id="password" value="kangjian">
+                    <input name="captcha" type="hidden" id="captcha" value="cp6b">
+                    <input name="password_confirm" type="hidden" id="password_confirm" value="kangjian">
+                    <div class="register_container-name">
+                        <span></span>
+                        <div class="register_name">手机验证码：</div>
+                        <input type="text" name="vcode" id="vcode" class="register_vcode-text" maxlength="4"
+                            title="请输入您手机上的验证码">
+                        <input class="register_vcode" type="button" id="send_auth_code" value="免费获取验证码">
+                        <div width="150px;" id="red1" style="color:red;"></div>
+                        <div class="clear"></div>
+                    </div>
+                </form>
+                <div class="bo-si1">
+                    <form>
+                        <input type="checkbox" checked="checked" class="register_checked">
+                        <b>我已阅读并同意<a href="http://www.mayzone360.com/shop/document-agreement.html">《美逊商城会员注册协议》</a></b>
+                    </form>
+                    <div class="clear"></div>
+                </div>
+                <div class="register_next1"><a href="#" id="regist">注册</a></div>
             </div>
             <!-- 第三步 -->
-            <div class="register_container-box" >
+            <div class="register_container-box2">
                 <p class="success">注册成功</p>
-                    <div class="register_next"><a href="#" id="regist">完成</a></div>
+                <div class="register_next2"><a href="login.html" id="regist">完成</a></div>
             </div>
         </div>
     </div>

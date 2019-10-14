@@ -1,15 +1,15 @@
 <?php
 include "conn.php";
-if(isset($_POST['xingming'])){
-    $name=@$_POST['xingming'];
-    $result=$conn->query("select * from registry where username='$name'");
-    if($result->fetch_assoc()){
+if (isset($_POST['xingming'])) {
+    $name = @$_POST['xingming'];
+    $result = $conn->query("select * from registry where username='$name'");
+    if ($result->fetch_assoc()) {
         echo 1;
-    }else{
+    } else {
         echo 0;
     }
-}else{
-    exit ('非法操作');
+} else {
+    exit('非法操作');
 }
 
 if (isset($_POST['xingming']) && isset($_POST['password'])) {

@@ -16,11 +16,11 @@
 #home_top .home_top .loginuser a{
     margin: 0px 3px;
 }
-.loginuser{
+.loginuser,.admin{
     line-height: 30px;
     float: left;
 }
-.loginuser .home-pic{
+.loginuser .home-pic,.admin .home-pic{
     float: left;
     width: 12px;
     height: 12px;
@@ -597,7 +597,7 @@
     color: #ee0b39;
     border-bottom: #ee0b39 4px solid;
 }
-.register_form_wrap .register_nav .register_step .register_step-01{
+.register_form_wrap .register_nav .register_step .register_step-01,.register_step-02,.register_step-03{
     display: block;
     float: left;
     width: 20px;
@@ -606,35 +606,40 @@
     background: url(../img/number-02.png) center no-repeat;
 }
 
-.register_form_wrap .register_container-box{
+.register_form_wrap .register_container-box,.register_container-box1,.register_container-box2{
     width: 600px;
     margin: 0 auto;
     margin-top: 40px;
     padding-bottom: 50px;
-    display: none;
+    /* display: none; */
 }
 .register_form_wrap .showstep{
     display: block;
 }
-.register_form_wrap .register_container-box .register_container-name{
+.register_container-box .register_container-name,.register_container-box1 .register_container-name,.register_container-box2 .register_container-name{
     margin-bottom: 10px;
     position: relative;
-    overflow: hidden;
 }
-.register_container-box .register_container-name .red{
+.clear{
+    clear: both;
+}
+.register_container-box .register_container-name #red,#red1,#red2,#red3,#red4{
     display: none;
     background: url(../img/false.gif) left no-repeat;
     padding-left: 20px;
     position: absolute;
     top: 10px;
-    right: 16px;
-    width: 94px;
+    left: 480px;
     height: 18px;
     font-size: 12px;
     color: #ee0000;
     border: 1px solid #FF6600;
+    white-space: nowrap;
 }
-.register_container-box .register_container-name .green{
+/* 用户名不能为空/用户名存在 */
+
+
+.register_container-box .register_container-name .green,#green1,#green2,#green3,#green4{
     display: none;
     width: 20px;
     height: 20px;
@@ -676,7 +681,7 @@
 .register_password {
     background: url(../img/dengl_06.jpg) no-repeat;
 }
-.register_yz-b{
+.register_yz-br,.register_yz-by,.register_yz-bg{
     margin-top: 10px;
     margin-left: 5px;
     margin-right: 5px;
@@ -748,15 +753,16 @@
     height: 20px;
     line-height: 20px;
 }
-.register_next{
+.register_next,.register_next1,.register_next2{
     width: 360px;
     height: 48px;
     background-color: #ee0b39;
     text-align: center;
+    margin-top: 20px;
     line-height: 48px;
     margin-left: 110px;
 }
-.register_next a{
+.register_next a,.register_next1 a,.register_next2 a{
     display: block;
     width: 360px;
     font-size: 18px;
@@ -894,7 +900,7 @@
 .login_contentSub{
     padding-left: 40px;
 }
-.login_contentSub input{
+#login .login_contentSub input{
     height: 42px;
     width: 291px;
     font-family: "微软雅黑";
