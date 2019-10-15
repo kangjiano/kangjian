@@ -12,10 +12,11 @@ if (isset($_POST['xingming'])) {
     exit('非法操作');
 }
 
-if (isset($_POST['xingming']) && isset($_POST['password'])) {
+if (isset($_POST['xingming']) && isset($_POST['password'])&& isset($_POST['mobile'])) {
     echo 1;
     $user = $_POST['xingming'];
     $pass = $_POST['password'];
-    $conn->query("insert registry values(null,'$user','$pass',NOW(),null)");
+    $iphone = $_POST['mobile'];
+    $conn->query("insert registry values(null,'$user','$pass',NOW(),'$iphone')");
     // header('location:http://localhost/JS1909/Day%2022/loginregistry/src/login.html');//php的跳转
 }

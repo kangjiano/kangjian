@@ -196,17 +196,17 @@
     $regist.on("click", function () {
         console.log(1);
         if (userlock && password && textslock && yzmlock) {
-            $.ajax({
+            // $.ajax({
 
-                type: 'post',
-                url: phpurl + 'register.php',
-                data: {
-                    xingming: $username.val(),
-                    password: $userpassword.val()
-                },
-                async: true,
-                dataType: 'json'
-            })
+            //     type: 'post',
+            //     url: phpurl + 'register.php',
+            //     data: {
+            //         xingming: $username.val(),
+            //         password: $userpassword.val()
+            //     },
+            //     async: true,
+            //     dataType: 'json'
+            // })
             $('.ulli1').addClass('register_step').siblings('.register_nav li').removeClass('register_step');
             $('.register_container-box1').addClass('showstep');
             $('.register_container-box').removeClass('showstep');
@@ -245,15 +245,27 @@
     $('.register_next1').on("click", function () {
         if (true) {
             $.ajax({
+
                 type: 'post',
-                url: phpurl + 'register1.php',
+                url: phpurl + 'register.php',
                 data: {
-                    xingming1: user,
+                    xingming: $username.val(),
+                    password: $userpassword.val(),
                     mobile: $mobile.val()
                 },
                 async: true,
                 dataType: 'json'
-            });
+            })
+            // $.ajax({
+            //     type: 'post',
+            //     url: phpurl + 'register1.php',
+            //     data: {
+            //         xingming1: user,
+            //         mobile: $mobile.val()
+            //     },
+            //     async: true,
+            //     dataType: 'json'
+            // });
             $('.ulli2').addClass('register_step').siblings('.register_nav li').removeClass('register_step');
             $('.register_container-box2').addClass('showstep');
             $('.register_container-box1').removeClass('showstep');

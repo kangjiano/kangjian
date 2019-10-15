@@ -159,7 +159,7 @@
         border-color: #777 transparent transparent transparent;
         border-style: solid dashed dashed dashed;
 }
-
+/* 头部结束 */
 
 
 
@@ -252,21 +252,38 @@
     margin-left: -100px
 }
 #banner ol li {
+    background: url(../img/tg.png) no-repeat;
     float: left;
     width: 20px;
     height: 20px;
-    background: #ccc;
     border-radius: 50%;
     margin-right: 5px;
     text-indent: -999em;
     cursor: pointer;
+}
+#banner ol li.active {
+    background-position: 0 -20px;
+}
+
+
+.timer3{
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    width: 0;
+    background: url(../img/timer.png) top right no-repeat;
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+    font-size: 0;
+    overflow: hidden;
+    z-index: 1;
 }
 .home_wrap{
     width: 1224px;
     height: 500px;
     position: relative;
     margin: 0 auto;
-    visibility: hidden;
 }
 .home_nav_left{
     width: 200px;
@@ -327,6 +344,7 @@
 
 
 /* 二级菜单 */
+
 .home_nav_right{
     width: 686px;
     height: 500px;
@@ -337,6 +355,10 @@
     position: absolute;
     left:200px;
     display: none;
+}
+.active{
+    background: #fff;
+    display: block;
 }
 .home_nav_right_wrap{
     float: left;
@@ -382,7 +404,56 @@
     padding: 0 5px;
     white-space: nowrap;
 }
+/* 楼梯 */
+#loutinav {
+    width: 35px;
+    position: fixed;
+    top: 200px;
+    right: 50px;
+    border: 1px solid #ddd;
+    display: none;
+    z-index: 999;
+}
 
+#loutinav ul li {
+    width: 35px;
+    height: 42px;
+    border-bottom: 1px dotted #DDDDDD;
+    list-style: none;
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    padding: 10px 0;
+    background: #918888;
+    color: #fff;
+}
+
+#loutinav ul li span {
+    width: 35px;
+    height: 41px;
+    padding: 7px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#loutinav ul li.last {
+    background: #5e4a4a;
+    color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+#loutinav ul li.loutiactive span {
+    background: #c00;
+    color: #fff;
+    display: block;
+}
+#loutinav ul li:hover span {
+    background: #c00;
+    color: #fff;
+    display: block;
+}
 
 /* 中部1 */
 #home_content1{
@@ -423,7 +494,7 @@
 #home_content1 .home_content_ul .grouppro-Cost .grouppro-Cos-icons{
     float: right;
     width: 24px;
-    margin-right: 8%;
+    margin-right: 10%;
 }
 #home_content1 .home_content_ul .grouppro-Cost .grouppro-Cos-icons img{
     font-weight: normal;
