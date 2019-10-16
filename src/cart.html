@@ -99,6 +99,13 @@
             </li>
         </ul>
     </header>
+
+    <div class="ncc-null-shopping"><i class="ico"></i>
+        <h4>您的购物车还没有商品</h4>
+        <p><a href="Qindex.html" class="ncc-btn-mini mr10"></i>马上去购物</a> 
+            <a href="#" class="ncc-btn-mini"></i>查看自己的订单</a></p>
+
+    </div>
     <div class="detail_main">
         <div class="detail_title">
             <h3>我的购物车</h3>
@@ -128,7 +135,7 @@
                         </th>
                     </tr>
                     <!-- S one store list -->
-                    <tr id="cart_item_106392" nc_group="106392" class="shop-list ">
+                    <!-- <tr id="cart_item_106392" nc_group="106392" class="shop-list ">
                         <td>
                             <input type="checkbox" checked="" nc_type="eachGoodsCheckBox" value="106392|1"
                                 id="cart_id106392" name="cart_id[]">
@@ -162,14 +169,14 @@
                         <td class="w80"> <a href="javascript:void(0)" onclick="collect_goods('4071');">收藏</a><br>
                             <a href="javascript:void(0)" onclick="drop_cart_item(106392);">删除</a>
                         </td>
-                    </tr>
+                    </tr> -->
 
                     <tr>
                         <td class="tr" colspan="20">
                             <div class="detail_store_account">
                                 <dl>
                                     <dt>店铺合计：</dt>
-                                    <dd><em nc_type="eachStoreTotal">12.90</em>元</dd>
+                                    <dd><em class="eachStoreTotal">12.90</em>元</dd>
                                 </dl>
                             </div>
                         </td>
@@ -259,6 +266,9 @@
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="script/cart.js"></script>
 </body>
 
 </html>
