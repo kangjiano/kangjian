@@ -1,5 +1,7 @@
-; (function () {
-    const phpurl = 'http://10.31.155.57/SectionTwo/mayzone/php/';
+define(['require','jqcookie'], function() {
+   return{
+    init:function(){
+        const phpurl = 'http://10.31.155.57/SectionTwo/mayzone/php/';
 
     console.log($('#submit'));
     $('#submit').on("click", function () {
@@ -22,4 +24,7 @@
             }
         })
     })
-})();
+    }
+   }
+    
+});

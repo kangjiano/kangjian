@@ -15,7 +15,8 @@ a{
     cursor: pointer;
 }
 .public-top{
-    float: right;
+    position: absolute;
+    right: 0;
     line-height: 30px;
     text-align: center;
 }

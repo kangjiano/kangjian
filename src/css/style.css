@@ -249,7 +249,8 @@
     position: absolute;
     bottom: 10px;
     left: 50%;
-    margin-left: -100px
+    margin-left: -100px;
+    z-index:999;
 }
 #banner ol li {
     background: url(../img/tg.png) no-repeat;
@@ -341,6 +342,7 @@
     color: #666666;
     margin-right: 5%;
 }
+
 
 
 /* 二级菜单 */
@@ -682,7 +684,7 @@
     margin: 0 auto;
     margin-top: 40px;
     padding-bottom: 50px;
-    /* display: none; */
+    display: none;
 }
 .register_form_wrap .showstep{
     display: block;
